@@ -12,8 +12,11 @@
 ---
 
 ##### １.Beanの依存関係が以下の図のようになるように(1)〜(4)を埋めてください。
+
 (1)@Autowired
+
 (2)YyyService
+
 (4)ZzzRepository
 
 ---
