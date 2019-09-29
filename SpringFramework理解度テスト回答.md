@@ -1,7 +1,7 @@
 # Spring Framework理解度テスト
 
 以下のページの問題回答。
-[12.5. Spring Framework理科度チェックテスト](http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Appendix/SpringComprehensionCheck.html)
+[12.5. Spring Framework理解度チェックテスト](http://terasolunaorg.github.io/guideline/5.5.1.RELEASE/ja/Appendix/SpringComprehensionCheck.html)
 *TERASOLUNA Serve Framework for Java(5.x)Development Guideline 5.5.1RELEASE documentation 12.Appendix(Know How)*
 
 穴埋め問題の問題文・図などは上記ページを参照ください。
@@ -12,7 +12,6 @@
 ---
 
 ##### １.Beanの依存関係が以下の図のようになるように(1)〜(4)を埋めてください。
-
 (1)@Autowired
 (2)YyyService
 (4)ZzzRepository
@@ -26,11 +25,9 @@
 - @Controller
   …プレゼンテーション層SpringMVC用アノテーション。SrpringMVCにおいては、
     Controller interfaceのimplementsと同等の意味
- 
 - @Service
   …ビジネスロジック層Service用アノテーション。
     →これをつけておくことにより、bean定義ファイルの<componetns-scanタグによって自動でDIコンテナに登録される。
-
 - @Repository
     DAOをDIコンテナに登録するときに使用する。
     例外をすべてDataAccessExceptionに変換する。
