@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>トップ画面 </title>
+  <!--
+  <script>
+    let hello = function(){
+      alert("say hello,!");
+    }
+  </script>
+  -->
+  <!--
+  <script>
+    let hello = function(name){
+      return ('say hello,'+ name + '!');
+    }
+    alert(hello('takeshi'));
+  </script>
+  <script>
+    function hello(getname){
+      alert('say hello' + getname());
+    }
+    hello (()=>{return " 太郎"});
+    hello(()=>" 花子");
+
+  </script>
+  -->
+</head>
+<body>
+  <h1>JavaScriptテスト</h1>
+
+  <h4>オブジェクトとかメソッドとかのテスト</h4>
+  
+  <script>
+    let obj = {
+      red:255,blue:15,green:30,
+      total:function(){
+        return this.red + this.blue + this.green;
+      }
+    };
+    document.write(obj.total());
+  </script>
+  <br>
+
+  <h4>コンストラクタ関数のテスト</h4>
+  <script>
+    function myobj(red,blue,green){
+      this.r = red;
+      this.b = blue;
+      this.g = green;
+      this.total = function(){
+        return this.r + this.b + this.g;
+      }
+    }
+    let ob = new myobj(100,200,300);
+    document.write(ob.total());
+  </script>
+  <br>
+
+  <h4>クラスのテスト</h4>
+  <script>
+    class sampleclass{
+      constructor(a,b,c){
+        this.pram1 = a;
+        this.pram2 = b;
+        this.pram3 = c;
+      }
+
+      get total(){
+        return this.pram1 + this.pram2 + this.pram3;
+      }
+
+      writeP(){
+        document.write(this.total);
+      }
+
+    };
+    let cobj = new sampleclass(1,2,3);
+    cobj.writeP();
+  </script>
+  <br>
+
+  <h4>スクリプトファイルの読み込みテスト</h4>
+  <script src="./hello.js">
+  </script>
+  <br> 
+
+  <h4>DOMテスト</h4>
+  <div id="test"></div>
+  <script>
+    document.getElementById("test").textContent = 'abc';
+  </script>
+  <br> 
+
+  <h4>モジュールのテスト</h4>
+  <script type="module">
+    import {MyObj2} from './test.js';
+
+    var ob2 = new MyObj2();
+    document.getElementById("ob").textContent = ob2.total();
+    ob2.total();
+  </script>
+  <div id="ob"></div>
+
+
+
+</body>
+</html>
